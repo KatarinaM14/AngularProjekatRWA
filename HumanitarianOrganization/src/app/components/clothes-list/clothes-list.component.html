@@ -1,0 +1,3 @@
+<ul *ngFor="let c of clothes | async">
+    <app-clothes [c]="c" (onClick)="selectedClothes($event)"></app-clothes>
+</ul>

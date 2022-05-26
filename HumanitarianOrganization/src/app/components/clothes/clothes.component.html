@@ -1,0 +1,19 @@
+<div class="container-fluid page">
+    <div class="page__box p-3 mt-2">
+        Clothes
+    </div>
+    <div class="page__content shadow p-3 position-relative">
+        <div class="page__content-data position-absolute text-center">
+            <!-- /////////////////////////////////////////////////////// -->
+            <div class="container" *ngIf="clothes" (click)="clicked()">
+                <div class="donor">{{clothes.donor}}</div>
+                <div class="category">{{clothes.category}}</div>
+                <img class="image" src="{{clothes.image}}"/>
+                <div class="description">
+                    {{clothes.description.split(" ").splice(0, 15).join(" ") }}...
+                </div>
+            </div>
+            <!-- /////////////////////////////////////////////////////// -->
+        </div>
+    </div>
+</div>

@@ -1,0 +1,5 @@
+<ul *ngFor="let singleFood of food | async">
+    <app-single-food [singleFood]="singleFood"
+    (onClick)="selectedFood($event)">
+    </app-single-food>
+</ul>

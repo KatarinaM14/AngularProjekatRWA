@@ -1,0 +1,79 @@
+{
+    "clothes": [
+        {
+            "id": 1,
+            "category": "Majica",
+            "donor": "Katarina Maksimovic",
+            "description": "Majica je S velicine. Nosena je 3 meseca. Odlicnog je kvaliteta.",
+            "image": ""
+        },
+        {
+            "id": 2,
+            "category": "Pantalone",
+            "donor": "Stefan Markovic",
+            "description": "Pantalone su broj 40. Nosene su 9 meseci.",
+            "image": ""
+        },
+        {
+            "id": 3,
+            "category": "Dukserica",
+            "donor": "Milica Miletic",
+            "description": "Dukserica je S velicine. Nosena je 5 meseca. Odlicnog je kvaliteta.",
+            "image": ""
+        },
+        {
+            "id": 4,
+            "category": "Kosulja",
+            "donor": "Milos Dimic",
+            "description": "Kosulja je XL velicine. Nosena je 2 meseca. Odlicnog je kvaliteta.",
+            "image": ""
+        }
+    ],
+    "food": [
+        {
+            "id": 1,
+            "category": "Slatkisi",
+            "name": "Milka",
+            "donor": "Dragana Miletic",
+            "image": ""
+        },
+        {
+            "id": 2,
+            "category": "Osnovne namirnice",
+            "name": "Zejtin",
+            "donor": "Nenad Simic",
+            "image": ""
+        },
+        {
+            "id": 3,
+            "category": "So",
+            "name": "Osnovne namirnice",
+            "donor": "Jelena Zdravkovic",
+            "image": ""
+        },
+        {
+            "id": 4,
+            "category": "Mlecni proizvodi",
+            "name": "Mleko",
+            "donor": "Natasa Milenkovic",
+            "image": ""
+        }
+    ],
+    "volunteering": [
+        {
+            "id": 1,
+            "description": "",
+            "volunteer": false
+        },
+        {
+            "id": 2,
+            "description": "",
+            "volunteer": false
+        },
+        {
+            "id": 3,
+            "description": "",
+            "volunteer": false
+        }
+    ]
+}

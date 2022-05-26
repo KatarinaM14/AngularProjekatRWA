@@ -1,0 +1,17 @@
+img.image{
+    width: 50%;
+}
+div.name{
+    margin-top: 0;
+    text-align: center;
+    background-color: powderblue;
+}
+div.caontainer{
+    height: fit-content;
+}
+
+:host{
+    width: 200px;
+    display: flex;
+    box-shadow: 10px 5px 5px gray;
+}
