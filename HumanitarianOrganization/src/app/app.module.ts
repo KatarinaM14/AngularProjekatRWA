@@ -28,6 +28,9 @@ import { AllClothesComponent } from './components/all-clothes/all-clothes.compon
 import { FoodDetailsComponent } from './components/food-details/food-details.component';
 import { FoodListComponent } from './components/food-list/food-list.component';
 import { SingleFoodComponent } from './components/single-food/single-food.component';
+import { VolunteeringListComponent } from './components/volunteering-list/volunteering-list.component';
+import { VolunteeringDetailsComponent } from './components/volunteering-details/volunteering-details.component';
+import { VolunteeringsComponent } from './components/volunteerings/volunteerings.component';
 
 
 @NgModule({
@@ -49,6 +52,9 @@ import { SingleFoodComponent } from './components/single-food/single-food.compon
     FoodDetailsComponent,
     FoodListComponent,
     SingleFoodComponent,
+    VolunteeringListComponent,
+    VolunteeringDetailsComponent,
+    VolunteeringsComponent,
     
     
   ],

@@ -5,6 +5,14 @@
     <div class="page__content shadow p-3 position-relative">
         <div class="page__content-data position-absolute text-center">
             Volunteering Content Goes Here
+            <div class="container" *ngIf="volunteering" (click)="clicked()">
+                <div class="description">
+                    {{volunteering.description.split(" ").splice(0, 15).join(" ")}}...   
+                </div>
+
+                <button class="volunteer">Volunteer</button>
+
+            </div>
         </div>
     </div>
 </div>

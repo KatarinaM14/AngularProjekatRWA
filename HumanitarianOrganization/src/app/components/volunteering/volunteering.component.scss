@@ -1,1 +1,14 @@
-@import "../home/home.component.scss"
+@import "../home/home.component.scss";
+
+div.container{
+    height: fit-content;
+}
+div.description{
+    width: 45%;
+    float: right;
+}
+:host{
+    width: 200px;
+    display: block;
+    box-shadow: 10px 5px 5px gray;
+}
