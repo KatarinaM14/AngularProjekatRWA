@@ -10,13 +10,16 @@ div.category{
 }
 div.container{
     height: fit-content;
+    width: 300px;
+     display: block;
+    box-shadow: 10px 5px 5px gray;
 }
 div.description{
     width: 45%;
     float: right;
 }
 
-// :host{
+// .container{
 //     width: 200px;
 //     display: block;
 //     box-shadow: 10px 5px 5px gray;
