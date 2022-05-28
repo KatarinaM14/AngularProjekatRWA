@@ -1,2 +1,13 @@
-<app-clothes-list></app-clothes-list>
-<app-clothes-details [clothes]="selectedClothes | async"></app-clothes-details>
+<div class="container-fluid page">
+    <div class="page__box p-3 mt-2">
+        Clothes
+    </div>
+    <div class="page__content shadow p-3 position-relative">
+        <div class="page__content-data position-absolute text-center">
+
+
+             <app-clothes-list></app-clothes-list>
+            <app-clothes-details [clothes]="selectedClothes | async"></app-clothes-details>
+        </div>
+    </div>
+</div>

@@ -1,6 +1,10 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { Observable, of } from 'rxjs';
+import { Store } from '@ngrx/store';
 import { Food } from 'src/app/models/food';
+import { AppState } from 'src/app/store/app.state';
+import { selectFood } from 'src/app/store/food.action';
+import { selectAllFood } from 'src/app/store/food.selector';
 
 @Component({
   selector: 'app-food-list',
@@ -18,7 +22,7 @@ export class FoodListComponent implements OnInit {
     this.food = this.store.select(selectAllFood);
   }
   selectedFood(singleFood : Food){
-    this.store.dispatch(selectFood({foodID: singleFood.id }));
+    this.store.dispatch(selectFood({foodId: singleFood.id }));
   }
 
 }

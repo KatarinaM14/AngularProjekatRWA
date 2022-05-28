@@ -1,4 +1,4 @@
-import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
+import {  NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -13,7 +13,9 @@ import { VolunteeringComponent } from './components/volunteering/volunteering.co
 import { HomeComponent } from './components/home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
+import { HttpClientModule } from '@angular/common/http';
 
+import { StoreModule } from '@ngrx/store';
 import { MatListModule } from '@angular/material/list'
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
@@ -31,7 +33,18 @@ import { SingleFoodComponent } from './components/single-food/single-food.compon
 import { VolunteeringListComponent } from './components/volunteering-list/volunteering-list.component';
 import { VolunteeringDetailsComponent } from './components/volunteering-details/volunteering-details.component';
 import { VolunteeringsComponent } from './components/volunteerings/volunteerings.component';
-
+import { clothesReducer } from './store/clothes.reducer';
+import { foodReducer } from './store/food.reducer';
+import { volunteeringReducer } from './store/volunteering.reducer';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { environment } from 'src/environments/environment';
+import { EffectsModule } from '@ngrx/effects';
+import { ClothesEffects } from './store/clothes.effects';
+import { FoodEffects } from './store/food.effect';
+import { VolunteeringEffects } from './store/volunteering.effects';
+import { ClothesService } from './services/clothes.service';
+import { FoodService } from './services/food.service';
+import { VolunteeringService } from './services/volunteering.service';
 
 @NgModule({
   declarations: [
@@ -68,9 +81,16 @@ import { VolunteeringsComponent } from './components/volunteerings/volunteerings
     MatMenuModule,
     MatToolbarModule,
     MatIconModule,
-    MatDividerModule
+    MatDividerModule,
+    HttpClientModule,
+    StoreModule.forRoot({clothes: clothesReducer, food: foodReducer, volunteering: volunteeringReducer}),
+    StoreDevtoolsModule.instrument({
+      maxAge: 25,
+      logOnly: environment.production,
+    }),
+    EffectsModule.forRoot([ClothesEffects, FoodEffects, VolunteeringEffects]),
   ],
-  providers: [],
+  providers: [ClothesService, FoodService, VolunteeringService],
   bootstrap: [AppComponent],
 })
 export class AppModule { }

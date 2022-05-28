@@ -1,6 +1,9 @@
 import { Component, OnInit, Output , EventEmitter, Input } from '@angular/core';
+import { Observable, of } from 'rxjs';
 import { Food } from 'src/app/models/food';
-
+import { selectClickedFood } from 'src/app/store/food.selector';
+import { Store } from '@ngrx/store';
+import { AppState } from 'src/app/store/app.state';
 
 @Component({
   selector: 'app-food',
@@ -8,18 +11,16 @@ import { Food } from 'src/app/models/food';
   styleUrls: ['./food.component.scss']
 })
 export class FoodComponent implements OnInit {
-  @Input() food: Food | null = null;
-  @Output() onClick: EventEmitter<Food> = new EventEmitter<Food>();
+
+  title = 'ng-food';
+  selectedFood: Observable<Food | null> = of(null);
 
 
-  constructor() { }
+  constructor(private store: Store<AppState>) { }
 
   ngOnInit(): void {
+    this.selectedFood = this.store.select(selectClickedFood);
   }
 
-  clicked(){
-    if(this.food){
-      this.onClick.emit(this.food);
-    }
-  }
+
 }

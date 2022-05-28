@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "api": "json-server ./src/db/db.json --watch"
   },
   "private": true,
   "dependencies": {
@@ -22,6 +23,10 @@
     "@angular/router": "~13.3.0",
     "@material-ui/core": "^4.12.4",
     "@material-ui/icons": "^4.11.3",
+    "@ngrx/effects": "^13.2.0",
+    "@ngrx/entity": "^13.2.0",
+    "@ngrx/store": "^13.2.0",
+    "@ngrx/store-devtools": "^13.2.0",
     "bootstrap": "^5.2.0-beta1",
     "bootstrap-icons": "^1.8.2",
     "font-awesome": "^4.7.0",
@@ -36,6 +41,7 @@
     "@types/jasmine": "~3.10.0",
     "@types/node": "^12.11.1",
     "jasmine-core": "~4.0.0",
+    "json-server": "^0.17.0",
     "karma": "~6.3.0",
     "karma-chrome-launcher": "~3.1.0",
     "karma-coverage": "~2.1.0",

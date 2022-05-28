@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { Volunteering } from 'src/app/models/volunteering';
+import { Store } from '@ngrx/store';
+import { AppState } from 'src/app/store/app.state';
+import { selectClickedVolunteering } from 'src/app/store/volunteering.selector';
 
 @Component({
   selector: 'app-volunteerings',

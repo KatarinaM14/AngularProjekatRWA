@@ -8,7 +8,7 @@ import { Food } from 'src/app/models/food';
 })
 export class FoodDetailsComponent implements OnInit {
 
-  @Input() food: Food | null = null;
+  @Input() singleFood: Food | null = null;
 
   constructor() { }
 

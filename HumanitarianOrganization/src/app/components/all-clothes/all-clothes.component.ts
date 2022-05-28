@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { Clothes } from 'src/app/models/clothes';
+import { AppState } from 'src/app/store/app.state';
+import { Store } from '@ngrx/store';
+import { selectClickedClothes } from 'src/app/store/clothes.selector';
 
 @Component({
   selector: 'app-all-clothes',
@@ -15,7 +18,7 @@ export class AllClothesComponent implements OnInit {
   constructor(private store: Store<AppState>) { }
 
   ngOnInit(): void {
-    this.selectedClothes = this.store.select(selectClickClothes);
+    this.selectedClothes = this.store.select(selectClickedClothes);
   }
 
 }

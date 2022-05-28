@@ -1,6 +1,10 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { Clothes } from 'src/app/models/clothes';
+import { Store } from '@ngrx/store';
+import { AppState } from 'src/app/store/app.state';
+import { selectAllClothes } from 'src/app/store/clothes.selector';
+import { selectClothes } from 'src/app/store/clothes.action';
 
 @Component({
   selector: 'app-clothes-list',
@@ -10,12 +14,12 @@ import { Clothes } from 'src/app/models/clothes';
 })
 export class ClothesListComponent implements OnInit {
 
-  clothes: Observable<readonly Clothes[]> = of([]);
+  allClothes: Observable<readonly Clothes[]> = of([]);
 
   constructor(private store: Store<AppState>) { }
 
   ngOnInit(): void {
-    this.clothes = this.store.select(selectAllClothes);
+    this.allClothes = this.store.select(selectAllClothes);
   }
 
   selectedClothes(clothes: Clothes){

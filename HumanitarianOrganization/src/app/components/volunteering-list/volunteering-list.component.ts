@@ -1,6 +1,10 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { Volunteering } from 'src/app/models/volunteering';
+import { Store } from '@ngrx/store';
+import { AppState } from 'src/app/store/app.state';
+import { selectVolunteering } from 'src/app/store/volunteering.action';
+import { selectAllVolunteerings } from 'src/app/store/volunteering.selector';
 
 @Component({
   selector: 'app-volunteering-list',

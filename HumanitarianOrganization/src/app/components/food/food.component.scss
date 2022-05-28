@@ -1,20 +1,10 @@
 @import "../home/home.component.scss";
 
-img.image{
-    width: 50%;
-}
-
-div.name{
-    margin-top: 0;
-    text-align: center;
-    background-color: powderblue;
-}
-div.container{
-    height: fit-content;
-}
-:host{
-    width: 200px;
-    display: block;
-    box-shadow: 10px 5px 5px gray;
-}
-
+app-food-list {
+    margin-right: 40px;
+    float: left;
+  }
+  
+  app-food-details {
+    float: left;
+  }
