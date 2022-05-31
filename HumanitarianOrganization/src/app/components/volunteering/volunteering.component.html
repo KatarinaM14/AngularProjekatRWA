@@ -1,7 +1,8 @@
 
             <div class="container" *ngIf="volunteering" (click)="clicked()">
                 <div class="description">
-                    {{volunteering.description.split(" ").splice(0, 15).join(" ")}}...   
+                    {{volunteering.description}}
+                    <!-- {{volunteering.description.split(" ").splice(0, 15).join(" ")}}...    -->
                 </div>
 
                 <button class="volunteer">Volunteer</button>

@@ -1,6 +1,28 @@
-<div class="container" *ngIf="singleFood">
-    <h3>{{singleFood.name}}</h3>
-    <h3>{{singleFood.donor}}</h3>
-    <h3>{{singleFood.category}}</h3>
+<!-- <div class="container" *ngIf="singleFood">
+    <h1>Naziv: {{singleFood.name}}</h1>
+    <h1>Donirao/la: {{singleFood.donor}}</h1>
+    <h1>Kategorija: {{singleFood.category}}</h1>
     <img class="image" src="{{singleFood.image}}"/>
-</div>>
+    <button mat-button class="btn" (click)="openDialog()">Dodaj donaciju</button> -->
+
+<div class="container" *ngIf="singleFood" >         
+    <mat-card class="example-card">
+      <mat-card-header>
+        <!-- <div mat-card-avatar class="example-header-image"></div> -->
+        <mat-card-title>Donirao/la: {{singleFood.donor}}</mat-card-title>
+        <mat-card-subtitle>Kategorija: {{singleFood.category}}</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image src="{{singleFood.image}}" >
+      <mat-card-content>
+        <p>
+            Naziv: {{singleFood.name}}
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button (click)="like()">LIKE</button>
+        <button mat-button>{{singleFood.like}}</button>
+        <button mat-button (click)="askForFood()">Zatrazi donaciju</button>
+        <!-- <button mat-button (click)="addFood()">Zatrazi donaciju</button> -->
+      </mat-card-actions>
+    </mat-card>
+   </div>

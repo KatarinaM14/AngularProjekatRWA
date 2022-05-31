@@ -20,6 +20,10 @@ export class ClothesService {
     return this.httpClient.get<Clothes>(environment.apiURL + "/clothes/" + id)
     .pipe(catchError(errorHandler));
   }
+
+  deleteClothes(id:  number){
+    return this.httpClient.delete(environment.apiURL + "/clothes/" + id);
+  }
 }
 
 const errorHandler = (error: HttpErrorResponse) => {

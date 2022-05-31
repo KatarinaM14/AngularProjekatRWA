@@ -1,6 +1,19 @@
-<div class="container" *ngIf="singleFood" (click)="clicked()">
+<!-- <div class="container" *ngIf="singleFood" (click)="clicked()">
     <div class="name">{{singleFood.name}}</div>
-    <div class="category">{{singleFood.category}}</div>
-    <div class="donor">{{singleFood.donor}}</div>
+    <div class="category">Kategorija: {{singleFood.category}}</div>
+    <div class="donor">Donirao/la: {{singleFood.donor}}</div>
     <img class="image" src="{{singleFood.image}}"/>
-</div>
+</div> -->
+<div class="container" *ngIf="singleFood" (click)="clicked()">
+    <mat-card class="example-card">
+       <mat-card-title-group>
+         <mat-card-title>{{singleFood.name}}</mat-card-title>
+         <mat-card-subtitle>Kategorija: {{singleFood.category}}</mat-card-subtitle>
+         <img mat-card-lg-image src="{{singleFood.image}}" >
+       </mat-card-title-group>
+       <mat-card-content>
+        
+        Donirao/la: {{singleFood.donor}}
+       </mat-card-content>
+     </mat-card>
+    </div>

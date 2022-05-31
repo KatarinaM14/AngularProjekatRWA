@@ -29,5 +29,18 @@ export const clothesReducer = createReducer(
     on(Actions.selectClothes, (state, { clothesId }) => ({
         ...state,
         clickedClothesId: clothesId
-    }))
+    })),
+    on(Actions.incrementLikes,(state, {clothesId, like}) =>
+    adapter.updateOne(
+        {
+            id: clothesId ,
+            changes: {
+                like,
+            },
+        },
+        state
+    )),
+    on(Actions.deleteClothes, (state, action) =>
+    adapter.removeOne(action.id, state)
+    ),
 );

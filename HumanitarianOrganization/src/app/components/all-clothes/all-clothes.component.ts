@@ -12,7 +12,7 @@ import { selectClickedClothes } from 'src/app/store/clothes.selector';
 })
 export class AllClothesComponent implements OnInit {
 
-  tittle = 'ng-clothes';
+  tittle = 'ng-all-clothes';
   selectedClothes: Observable<Clothes | null> = of(null);
 
   constructor(private store: Store<AppState>) { }

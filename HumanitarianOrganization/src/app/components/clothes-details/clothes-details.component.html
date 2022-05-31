@@ -1,6 +1,27 @@
-<div class="container" *ngIf="clothes">
-    <div class="donor">Donor: {{clothes.donor}}</div>
-    <h3>{{clothes.category}}</h3>
+<!-- <div class="container" *ngIf="clothes">
+    <h1>Donirao/la: {{clothes.donor}}</h1>
+    <h1>Kategorija: {{clothes.category}}</h1>
     <img class="image" src="{{clothes.image}}"/>
     <div class="description">{{clothes.description}}</div>
-</div>
+</div> -->
+
+<div class="container" *ngIf="clothes" >         
+    <mat-card class="example-card">
+      <mat-card-header>
+        <!-- <div mat-card-avatar class="example-header-image"></div> -->
+        <mat-card-title>Donirao/la: {{clothes.donor}}</mat-card-title>
+        <mat-card-subtitle>Kategorija:  {{clothes.category}}</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image src="{{clothes.image}}" >
+      <mat-card-content>
+        <p>
+         {{clothes.description }}
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button (click)="like()">LIKE</button>
+        <button mat-button>{{clothes.like}}</button>
+        <button mat-button (click)="askForClothes()">Zatrazi donaciju</button>
+      </mat-card-actions>
+    </mat-card>
+   </div>

@@ -3,9 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-//import { NavbarComponent } from './components/navbar/navbar.component';
-import { DonatesComponent } from './components/donates/donates.component';
-
+import {MatCardModule} from '@angular/material/card';
 import { ClothesComponent } from './components/clothes/clothes.component';
 import { FoodComponent } from './components/food/food.component';
 import { PagesComponent } from './components/pages/pages.component';
@@ -45,13 +43,17 @@ import { VolunteeringEffects } from './store/volunteering.effects';
 import { ClothesService } from './services/clothes.service';
 import { FoodService } from './services/food.service';
 import { VolunteeringService } from './services/volunteering.service';
+import {MatDialogModule} from '@angular/material/dialog';
+
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import {MatButtonModule} from '@angular/material/button';
+import { FormsModule } from '@angular/forms';
+import {MatSelectModule} from '@angular/material/select';
 
 @NgModule({
   declarations: [
     AppComponent,
-   // NavbarComponent,
-    DonatesComponent,
-   
     ClothesComponent,
     FoodComponent,
     PagesComponent,
@@ -68,7 +70,7 @@ import { VolunteeringService } from './services/volunteering.service';
     VolunteeringListComponent,
     VolunteeringDetailsComponent,
     VolunteeringsComponent,
-    
+   
     
   ],
   imports: [
@@ -83,6 +85,13 @@ import { VolunteeringService } from './services/volunteering.service';
     MatIconModule,
     MatDividerModule,
     HttpClientModule,
+    MatDialogModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule,
+    FormsModule,
+    MatCardModule,
+   
     StoreModule.forRoot({clothes: clothesReducer, food: foodReducer, volunteering: volunteeringReducer}),
     StoreDevtoolsModule.instrument({
       maxAge: 25,

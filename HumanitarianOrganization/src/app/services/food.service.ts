@@ -1,8 +1,9 @@
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { catchError, throwError } from 'rxjs';
+
+import { catchError, Observable, throwError } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { Food } from '../models/food';
+import { Food, FoodModel } from '../models/food';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +12,7 @@ export class FoodService {
 
   constructor(private httpClient: HttpClient) { }
 
-  getAll(){
+  getAll(): Observable<Food[]>{
     return this.httpClient
     .get<Food[]>(environment.apiURL + '/food')
     .pipe(catchError(errorHandler));
@@ -22,6 +23,29 @@ export class FoodService {
       .get<Food>(`${environment.apiURL}/food/${id}`)
       .pipe(catchError(errorHandler));
   }
+
+  postFood(data: any){
+    return this.httpClient.post<any>(`${environment.apiURL}/food/`, data)
+    .pipe(catchError(errorHandler));
+  }
+
+  deleteFood(id:  number){
+    return this.httpClient.delete(environment.apiURL + "/food/" + id);
+  }
+  // postFood(
+  //   category: string,
+  //   name: string,
+  //   donor: string,
+  //   image: string){
+  //   return this.httpClient.post<any>(`${environment.apiURL}/food/`, {
+  //     ...FoodModel,
+  //     category,
+  //     name,
+  //     donor,
+  //     image
+  //   })
+  //   .pipe(catchError(errorHandler));
+  // }
 }
 
 const errorHandler = (error: HttpErrorResponse) => {

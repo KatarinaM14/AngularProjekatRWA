@@ -1,24 +1,23 @@
-img.image{
-    width: 50%;
-}
-h3, div.donor{
-    background-color: rgb(207, 24, 24);
-    margin-top: 0;
-    text-align: center;
-}
-div.donor{
-    text-align: center;
-}
+// img.image{
+//     width: 50%;
+// }
+// h3, div.donor{
+    
+//     margin-top: 0;
+//     text-align: center;
+// }
 
-div.description{
-    width: 25%;
-    float: right;
-}
+// div.description{
+//     width: 25%;
+//     float: right;
+//     font-size: medium;
+// }
 
 :host{
     width: 400px;
     display: block;
-    box-shadow: 10px 5px 5px rgb(45, 137, 160);
+    
+    box-shadow: 10px 5px 5px rgb(134, 148, 151);
 }
 
 div.container{

@@ -1,12 +1,21 @@
-
-            
-            <div class="container" *ngIf="clothes" (click)="clicked()">
-                <div class="donor">{{clothes.donor}}</div>
-                <div class="category">{{clothes.category}}</div>
-                <img class="image" src="{{clothes.image}}"/>
-                <div class="description">
-                    {{clothes.description.split(" ").splice(0, 15).join(" ") }}...
-                </div>
-            </div>
-           
-
+ <!-- <div class="container" *ngIf="clothes" (click)="clicked()">
+    <div class="donor">Donirao/la: {{clothes.donor}}</div>
+        <div class="category">Kategorija:  {{clothes.category}}</div>
+        <img class="image" src="{{clothes.image}}"/>
+         <div class="description">
+         {{clothes.description }}
+    </div>
+ </div> -->
+ 
+<div class="container" *ngIf="clothes" (click)="clicked()">
+<mat-card class="example-card">
+   <mat-card-title-group>
+     <mat-card-title>Donirao/la: {{clothes.donor}}</mat-card-title>
+     <mat-card-subtitle>Kategorija:  {{clothes.category}}</mat-card-subtitle>
+     <img mat-card-lg-image src="{{clothes.image}}" >
+   </mat-card-title-group>
+   <mat-card-content>
+      {{clothes.description }}
+   </mat-card-content>
+ </mat-card>
+</div>

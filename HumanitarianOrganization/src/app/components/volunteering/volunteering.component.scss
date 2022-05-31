@@ -1,14 +1,23 @@
 
 
 div.container{
-    height: fit-content;
+    display: flex;
+    height: 20vh;
+    flex-direction: column;
+    box-shadow: 10px 10px 10px 10px gray;
+    align-items: center;
 }
 div.description{
     width: 45%;
     float: right;
+    margin-top: 20px;
 }
 // :host{
 //     width: 200px;
 //     display: block;
 //     box-shadow: 10px 5px 5px gray;
 // }
+.volunteer{
+    width: 30%;
+    margin-top: 50px;
+}

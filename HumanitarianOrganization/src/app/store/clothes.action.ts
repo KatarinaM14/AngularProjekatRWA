@@ -16,3 +16,21 @@ export const selectClothes = createAction(
     'Select Clothes',
     props<{clothesId: number}>()
 );
+
+export const incrementLikes = createAction(
+    'Like a post',
+    props<{clothesId: number; like: number}>()
+);
+
+export const deleteClothes = createAction(
+    '[Clothes Component] Delete clothes',
+    props<{id: number}>()
+);
+export const deleteClothesFailure = createAction(
+    '[Clothes Component] Delete clothes failure',
+    props<{error: any}>()
+);
+
+export const deleteClothesSuccess = createAction(
+    '[Clothes Component] Delete clothes effect'
+);

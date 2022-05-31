@@ -1,12 +1,12 @@
-<div class="container-fluid page">
-    <div class="page__box p-3 mt-2">
+<div class="container-fluid">
+    <div class="header p-3 mt-2">
         Food
     </div>
-    <div class="page__content shadow p-3 position-relative">
-        <div class="page__content-data position-absolute text-center">
+    <div class="content shadow p-3 position-relative">
+        <!-- <div class="page__content-data position-absolute text-center"> -->
             
             <app-food-list></app-food-list>
             <app-food-details [singleFood]="selectedFood | async"></app-food-details>
-        </div>
+        <!-- </div> -->
     </div>
 </div>

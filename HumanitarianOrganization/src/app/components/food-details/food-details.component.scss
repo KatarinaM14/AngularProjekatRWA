@@ -1,18 +1,24 @@
-img.cover{
-    width:50%;
-}
+// img.image{
+//     width:50%;
+// }
 
-h3{
-    background-color: rgb(207, 24, 24);
-    margin-top: 0;
-    text-align: center;
-}
+// h3{
+    
+//     margin-top: 0;
+//     text-align: center;
+// }
 
 div.container{
     height: fit-content;
+    
+
 }
 :host{
     width: 400px;
-    display: flex;
-    box-shadow: 10px 5px 5px rgb(45, 137, 160);
+    display: block;
+    box-shadow: 10px 5px 5px rgb(134, 148, 151);
 }
+// .btn{
+//     color: rgb(8, 9, 9);
+//     background-color: rgb(105, 129, 142);
+// }

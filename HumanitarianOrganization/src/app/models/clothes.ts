@@ -3,5 +3,6 @@ export interface Clothes {
     category: string,
     donor : string,
     description : string,
-    image: string
+    image: string,
+    like: number
 }
