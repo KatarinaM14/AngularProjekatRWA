@@ -7,11 +7,13 @@ export interface Food{
     like : number ,
 }
 
+
+
 export var FoodModel: Food = {
     id: 0,
-    category : null,
-    name : null,
-    donor : null,
-    image : null,
+    category : '',
+    name : '',
+    donor : '',
+    image : '',
     like: 0,
 };

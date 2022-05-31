@@ -1,11 +1,12 @@
 
-            <div class="container" *ngIf="volunteering" (click)="clicked()">
+            <div class="container" *ngIf="volunteering">
                 <div class="description">
                     {{volunteering.description}}
                     <!-- {{volunteering.description.split(" ").splice(0, 15).join(" ")}}...    -->
                 </div>
 
-                <button class="volunteer">Volunteer</button>
+                <button  class="volunteer" (click)="volunteers()">Volunteer</button>
+                <div class="volunteers">Broj osoba koji zele da pomognu: {{volunteering.volunteers}}</div>
 
             </div>
   

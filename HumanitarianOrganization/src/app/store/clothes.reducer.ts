@@ -30,6 +30,16 @@ export const clothesReducer = createReducer(
         ...state,
         clickedClothesId: clothesId
     })),
+    on(Actions.donatedClothes,(state, {clothes }) =>(
+        {
+           ...state,
+           category: clothes.category,
+           donor: clothes.donor,
+           description: clothes.description,
+           image: clothes.image
+
+       }
+   )),
     on(Actions.incrementLikes,(state, {clothesId, like}) =>
     adapter.updateOne(
         {

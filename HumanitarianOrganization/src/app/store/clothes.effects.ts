@@ -31,4 +31,20 @@ export class ClothesEffects{
              ))
         );
     });
+
+    addClothes$ = createEffect(( )=>{
+        return this.actions$.pipe(
+            ofType(ClothesActions.addClothes),
+            switchMap((action) => 
+            this.clothesService
+            .postClothes(
+                action
+            )
+            .pipe(
+                map((clothes) => ClothesActions.donatedClothes({clothes})),
+                catchError((error) => of(ClothesActions.donatingClothesFailure({error})))
+            ))
+            
+        )
+    });
 }

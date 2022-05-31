@@ -16,7 +16,24 @@ export const selectClothes = createAction(
     'Select Clothes',
     props<{clothesId: number}>()
 );
+export const addClothes = createAction(
+    '[Dialog Component] Add ClothesFood',
+    props<{
+       category: string | null,
+       donor: string | null,
+       description: string | null,
+       image: string | null
+    }>()
+);
+export const donatedClothes = createAction(
+    '[Food Effect] Clothes Donation Success',
+    props<{clothes: Clothes }>()
+);
 
+export const donatingClothesFailure = createAction(
+    '[Food Effect] Donationing Clothes Failure',
+    props<{error: any }>()
+);
 export const incrementLikes = createAction(
     'Like a post',
     props<{clothesId: number; like: number}>()

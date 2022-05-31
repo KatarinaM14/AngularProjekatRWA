@@ -1,0 +1,29 @@
+<h1 mat-dialog-title>Dodaj donaciju</h1>
+<div mat-dialog-content>
+    <form [formGroup]="foodForm">
+    <mat-form-field appearance="outline">
+        <mat-label>Opis</mat-label>
+        <input formControlName="description" matInput placeholder="Naziv">
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Kategorija</mat-label>
+        <input formControlName="category" matInput placeholder="Kategorija">
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Ime i prezime</mat-label>
+        <input formControlName="donor" matInput placeholder="Ime i prezime">
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Ubacite sliku</mat-label>
+        <input formControlName="image" matInput placeholder="URL slike">
+      </mat-form-field>
+    </form>
+</div>
+<div mat-dialog-actions [align]="'end'">
+    <button mat-raised-button color="warn" mat-dialog-close>
+        Zatvori
+    </button>
+    <button mat-raised-button color="primary" (click)="addClothes()">
+        Sacuvaj
+    </button>
+</div>

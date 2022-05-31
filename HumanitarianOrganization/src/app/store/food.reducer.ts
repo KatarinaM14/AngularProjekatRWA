@@ -3,6 +3,7 @@ import { createReducer, on } from '@ngrx/store';
 import * as Actions from './food.action';
 import { Food } from "../models/food";
 import { FoodDetailsComponent } from '../components/food-details/food-details.component';
+import { state } from '@angular/animations';
 
 export interface FoodState extends EntityState<Food>{
     clickedFoodId: number;
@@ -21,8 +22,17 @@ export const foodReducer = createReducer(
         ...state,
         clickedFoodId: foodId,
     })),
-    on(Actions.donatedFood,(state, {food }) =>
-    adapter.setOne(food,state)),
+    on(Actions.donatedFood,(state, {food }) =>(
+         {
+            ...state,
+            category: food.category,
+            name: food.name,
+            donor: food.donor,
+            image: food.image
+
+        }
+    )),
+    // adapter.setOne(food,state)),
     on(Actions.incrementLikes,(state, {foodId, like}) =>
     adapter.updateOne(
         {

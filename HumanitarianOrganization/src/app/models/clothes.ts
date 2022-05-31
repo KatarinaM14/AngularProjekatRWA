@@ -6,3 +6,12 @@ export interface Clothes {
     image: string,
     like: number
 }
+
+export var ClothesModel: Clothes = {
+    id: 0,
+    category: '',
+    donor : '',
+    description : '',
+    image: '',
+    like: 0
+}

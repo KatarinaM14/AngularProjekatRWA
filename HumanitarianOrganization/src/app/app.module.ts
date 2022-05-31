@@ -48,8 +48,10 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatSelectModule} from '@angular/material/select';
+import { DialogComponent } from './components/dialogFood/dialogFood.component';
+import { DialogClothesComponent } from './components/dialog-clothes/dialog-clothes.component';
 
 @NgModule({
   declarations: [
@@ -70,6 +72,8 @@ import {MatSelectModule} from '@angular/material/select';
     VolunteeringListComponent,
     VolunteeringDetailsComponent,
     VolunteeringsComponent,
+    DialogComponent,
+    DialogClothesComponent,
    
     
   ],
@@ -91,6 +95,7 @@ import {MatSelectModule} from '@angular/material/select';
     MatButtonModule,
     FormsModule,
     MatCardModule,
+    ReactiveFormsModule,
    
     StoreModule.forRoot({clothes: clothesReducer, food: foodReducer, volunteering: volunteeringReducer}),
     StoreDevtoolsModule.instrument({

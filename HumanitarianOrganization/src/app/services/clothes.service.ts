@@ -21,6 +21,11 @@ export class ClothesService {
     .pipe(catchError(errorHandler));
   }
 
+  postClothes(data: any){
+    return this.httpClient.post<any>(`${environment.apiURL}/clothes/`, data)
+    .pipe(catchError(errorHandler));
+  }
+
   deleteClothes(id:  number){
     return this.httpClient.delete(environment.apiURL + "/clothes/" + id);
   }

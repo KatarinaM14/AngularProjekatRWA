@@ -16,10 +16,10 @@ export const selectFood = createAction(
 export const addFood = createAction(
     '[Dialog Component] Add Food',
     props<{
-        category: string;
-        name: string;
-        donor: string;
-        image: string;
+       category: string | null,
+       name: string | null,
+       donor: string | null,
+       image: string | null
     }>()
 );
 

@@ -19,6 +19,16 @@ export interface VolunteeringState extends EntityState<Volunteering> {
     on(Actions.selectVolunteering, (state, { volunteeringId }) => ({
       ...state,
       clickedVolunteeringId: volunteeringId,
-    }))
+    })),
+    on(Actions.incrementVolunteers,(state, {volunteeringId, volunteers}) =>
+    adapter.updateOne(
+        {
+            id: volunteeringId ,
+            changes: {
+                volunteers,
+            },
+        },
+        state
+    )),
   );
   

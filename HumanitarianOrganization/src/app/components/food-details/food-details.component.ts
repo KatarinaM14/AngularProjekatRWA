@@ -4,7 +4,7 @@ import { AppState } from 'src/app/store/app.state';
 import { Store } from '@ngrx/store';
 import { selectClickedFood, selectFoodFeature } from 'src/app/store/food.selector';
 import { deleteFood, incrementLikes } from 'src/app/store/food.action';
-import {MatDialog, MatDialogModule} from '@angular/material/dialog';
+
 
 @Component({
   selector: 'app-food-details',
@@ -16,7 +16,7 @@ export class FoodDetailsComponent implements OnInit {
   @Input() singleFood: Food | null = null;
   count : number = 0;
   
-  constructor(private store: Store<AppState>, private dialog: MatDialog) { 
+  constructor(private store: Store<AppState>) { 
     
   }
 
@@ -58,9 +58,6 @@ export class FoodDetailsComponent implements OnInit {
     }
   }
 
-  // addFood(){
-  //   this.dialog.open(DialogComponent,{
-  //     width: '30%'
-  //   });
-  // }
+  
+
 }

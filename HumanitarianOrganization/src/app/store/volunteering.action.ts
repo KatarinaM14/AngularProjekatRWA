@@ -12,4 +12,8 @@ export const loadVolunteeringSuccess = createAction(
     'Select Volunteering',
     props<{ volunteeringId: number }>()
   );
-  
+
+  export const incrementVolunteers= createAction(
+    'Voluneers',
+    props<{volunteeringId: number; volunteers: number}>()
+);

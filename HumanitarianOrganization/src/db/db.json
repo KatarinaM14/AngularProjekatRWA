@@ -1,79 +1,79 @@
 {
-    "clothes": [
-        {
-            "id": 1,
-            "category": "Majica",
-            "donor": "Katarina Maksimovic",
-            "description": "Majica je S velicine. Nosena je 3 meseca. Odlicnog je kvaliteta.",
-            "image": "https://wwws.dior.com/couture/ecommerce/media/catalog/product/cache/1/cover_image_1/870x580/17f82f742ffe127f42dca9de82fb58b1/w/m/1645805251_223T18A4499_X4804_E01_ZHC.jpg?imwidth=870"
-        },
-        {
-            "id": 2,
-            "category": "Pantalone",
-            "donor": "Stefan Markovic",
-            "description": "Pantalone su broj 40. Nosene su 9 meseci.",
-            "image": "https://dimg.dillards.com/is/image/DillardsZoom/mainProduct/roundtree--yorke-travel-smart-non-iron-pleated-ultimate-comfort-microfiber-stretch-dress-pants/05421659_zi_light_khaki.jpg"
-        },
-        {
-            "id": 3,
-            "category": "Dukserica",
-            "donor": "Milica Miletic",
-            "description": "Dukserica je S velicine. Nosena je 5 meseca. Odlicnog je kvaliteta.",
-            "image": "https://mrbeansport.rs/wp-content/uploads/2019/04/bld001-62s-4f-zenski-duks.jpg"
-        },
-        {
-            "id": 4,
-            "category": "Kosulja",
-            "donor": "Milos Dimic",
-            "description": "Kosulja je XL velicine. Nosena je 2 meseca. Odlicnog je kvaliteta.",
-            "image": "https://rs.beosport.com/media/catalog/product/cache/5520706cdd5888f9caf980abe039f428/D/1/D17026_C271_110-01_1.jpg"
-        }
-    ],
-    "food": [
-        {
-            "id": 1,
-            "category": "Slatkisi",
-            "name": "Milka",
-            "donor": "Dragana Miletic",
-            "image": "https://www.fresh-store.eu/10704-large_default/milka-oreo-choco-chocolate-100-g-34-oz.jpg"
-        },
-        {
-            "id": 2,
-            "category": "Osnovne namirnice",
-            "name": "Dijamant ulje",
-            "donor": "Nenad Simic",
-            "image": "https://cenoteka.rs/assets/images/articles/ulje-dijamant-1l-1002491-large.jpg"
-        },
-        {
-            "id": 3,
-            "category": "Osnovne namirnice",
-            "name": "So",
-            "donor": "Jelena Zdravkovic",
-            "image": "https://cenoteka.rs/assets/images/articles/kuhinjska-so-tuzlanska-1kg-1002342-large.jpg"
-        },
-        {
-            "id": 4,
-            "category": "Mlecni proizvodi",
-            "name": "Moja kravica",
-            "donor": "Natasa Milenkovic",
-            "image": "https://cenoteka.rs/assets/images/articles/dugotrajno-mleko-imlek-2-8-mm-1l-1001649-large.jpg"
-        }
-    ],
-    "volunteering": [
-        {
-            "id": 1,
-            "description": "Potreba mi je pomoc oko nabavke osnovnih namirnica. Imam 62 godine i zivim sama.",
-            "volunteer": false
-        },
-        {
-            "id": 2,
-            "description": "Potrebna mi je pomoc oko ciscenja kuce.",
-            "volunteer": false
-        },
-        {
-            "id": 3,
-            "description": "Potrebna mi je pomoc oko kucnog ljubimca.",
-            "volunteer": false
-        }
-    ]
+  "clothes": [
+    {
+      "id": 1,
+      "category": "Majica",
+      "donor": "Katarina Maksimovic",
+      "description": "Majica je S velicine. Nosena je 3 meseca. Odlicnog je kvaliteta.",
+      "image": "https://wwws.dior.com/couture/ecommerce/media/catalog/product/cache/1/cover_image_1/870x580/17f82f742ffe127f42dca9de82fb58b1/w/m/1645805251_223T18A4499_X4804_E01_ZHC.jpg?imwidth=870"
+    },
+    {
+      "id": 2,
+      "category": "Pantalone",
+      "donor": "Stefan Markovic",
+      "description": "Pantalone su broj 40. Nosene su 9 meseci.",
+      "image": "https://dimg.dillards.com/is/image/DillardsZoom/mainProduct/roundtree--yorke-travel-smart-non-iron-pleated-ultimate-comfort-microfiber-stretch-dress-pants/05421659_zi_light_khaki.jpg"
+    },
+    {
+      "id": 3,
+      "category": "Dukserica",
+      "donor": "Milica Miletic",
+      "description": "Dukserica je S velicine. Nosena je 5 meseca. Odlicnog je kvaliteta.",
+      "image": "https://mrbeansport.rs/wp-content/uploads/2019/04/bld001-62s-4f-zenski-duks.jpg"
+    },
+    {
+      "id": 4,
+      "category": "Kosulja",
+      "donor": "Milos Dimic",
+      "description": "Kosulja je XL velicine. Nosena je 2 meseca. Odlicnog je kvaliteta.",
+      "image": "https://rs.beosport.com/media/catalog/product/cache/5520706cdd5888f9caf980abe039f428/D/1/D17026_C271_110-01_1.jpg"
+    }
+  ],
+  "food": [
+    {
+      "id": 1,
+      "category": "Slatkisi",
+      "name": "Milka",
+      "donor": "Dragana Miletic",
+      "image": "https://www.fresh-store.eu/10704-large_default/milka-oreo-choco-chocolate-100-g-34-oz.jpg"
+    },
+    {
+      "id": 2,
+      "category": "Osnovne namirnice",
+      "name": "Dijamant ulje",
+      "donor": "Nenad Simic",
+      "image": "https://cenoteka.rs/assets/images/articles/ulje-dijamant-1l-1002491-large.jpg"
+    },
+    {
+      "id": 3,
+      "category": "Osnovne namirnice",
+      "name": "So",
+      "donor": "Jelena Zdravkovic",
+      "image": "https://cenoteka.rs/assets/images/articles/kuhinjska-so-tuzlanska-1kg-1002342-large.jpg"
+    },
+    {
+      "id": 4,
+      "category": "Mlecni proizvodi",
+      "name": "Moja kravica",
+      "donor": "Natasa Milenkovic",
+      "image": "https://cenoteka.rs/assets/images/articles/dugotrajno-mleko-imlek-2-8-mm-1l-1001649-large.jpg"
+    }
+  ],
+  "volunteering": [
+    {
+      "id": 1,
+      "description": "Potreba mi je pomoc oko nabavke osnovnih namirnica. Imam 62 godine i zivim sama.",
+      "volunteer": false
+    },
+    {
+      "id": 2,
+      "description": "Potrebna mi je pomoc oko ciscenja kuce.",
+      "volunteer": false
+    },
+    {
+      "id": 3,
+      "description": "Potrebna mi je pomoc oko kucnog ljubimca.",
+      "volunteer": false
+    }
+  ]
 }
