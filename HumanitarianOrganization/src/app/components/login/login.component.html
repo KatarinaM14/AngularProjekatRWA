@@ -1,0 +1,34 @@
+<div class="login">
+  <div class="loginLabelaDiv">
+    <h1>Prijavi se</h1>
+</div>
+
+    <form [formGroup]="userForm" class="forma">
+    
+        <div class="divData">
+        
+            <mat-form-field appearance="outline" class="emailInput" >
+              <mat-label>Email</mat-label>
+              <input formControlName="email" type="email" matInput placeholder="email" required>
+            </mat-form-field>
+          
+          <mat-form-field appearance="fill">
+            <mat-label>Enter your password</mat-label>
+            <input formControlName="password"  matInput [type]="hide ? 'password' : 'text'" required>
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+              <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+          </mat-form-field>
+    </div>
+      
+      <div class="btn">
+        <button mat-raised-button type="submit" (click)="submit()"  class="btnLoginIn">
+            <!-- <a mat-list-item  routerLinkActive="list-item-active"> -->
+                Prijavi se
+            <!-- </a> -->
+        </button>
+      </div>
+    </form>
+     
+      
+</div>

@@ -52,6 +52,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatSelectModule} from '@angular/material/select';
 import { DialogComponent } from './components/dialogFood/dialogFood.component';
 import { DialogClothesComponent } from './components/dialog-clothes/dialog-clothes.component';
+import { RegisterComponent } from './components/register/register.component';
+import { LoginComponent } from './components/login/login.component';
+import { userReducer } from './store/user/users.reducer';
+import { UserEffect } from './store/user/user.effects';
+import { UserService } from './services/user.service';
 
 @NgModule({
   declarations: [
@@ -74,6 +79,8 @@ import { DialogClothesComponent } from './components/dialog-clothes/dialog-cloth
     VolunteeringsComponent,
     DialogComponent,
     DialogClothesComponent,
+    RegisterComponent,
+    LoginComponent,
    
     
   ],
@@ -97,14 +104,14 @@ import { DialogClothesComponent } from './components/dialog-clothes/dialog-cloth
     MatCardModule,
     ReactiveFormsModule,
    
-    StoreModule.forRoot({clothes: clothesReducer, food: foodReducer, volunteering: volunteeringReducer}),
+    StoreModule.forRoot({clothes: clothesReducer, food: foodReducer, volunteering: volunteeringReducer, user: userReducer}),
     StoreDevtoolsModule.instrument({
       maxAge: 25,
       logOnly: environment.production,
     }),
-    EffectsModule.forRoot([ClothesEffects, FoodEffects, VolunteeringEffects]),
+    EffectsModule.forRoot([ClothesEffects, FoodEffects, VolunteeringEffects, UserEffect]),
   ],
-  providers: [ClothesService, FoodService, VolunteeringService],
+  providers: [ClothesService, FoodService, VolunteeringService, UserService],
   bootstrap: [AppComponent],
 })
 export class AppModule { }

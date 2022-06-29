@@ -19,5 +19,17 @@
                 </li>
             </ul>
         </div> -->
+        <div  *ngIf="!authenticated" class="dugmici">
+        <div class = "dugmiciDiv">
+            <div class = "dugmici1"  routerLink = "/login">Uloguj se</div>
+            <div class = "dugmici2" routerLink = "/register" >Registruj se</div>
+        </div>
+    </div>
+
+    <div  *ngIf="authenticated" class="dugmici">
+        <div class = "dugmiciDiv">
+            <div class = "dugmici3" (click)="logout()"  routerLink = "/login">Odjavi se</div>
+        </div>
+    </div>
     </mat-toolbar-row>
 </mat-toolbar>

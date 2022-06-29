@@ -27,7 +27,6 @@ export class DialogClothesComponent implements OnInit {
 
   addClothes(){
     console.log(this.foodForm.value);
-     
     console.log(this.foodForm.value.name);
 
     ClothesModel.category = this.foodForm.value.category;
@@ -36,6 +35,8 @@ export class DialogClothesComponent implements OnInit {
     ClothesModel.image = this.foodForm.value.image;
     ClothesModel.like = 0;
     console.log(ClothesModel);
+
+  
     this.store.dispatch(
             Actions.addClothes({
               category : ClothesModel.category,

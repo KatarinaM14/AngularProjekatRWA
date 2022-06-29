@@ -1,0 +1,104 @@
+$primary: #4db18c;
+
+
+div.regContainer
+{
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    margin-top: 10%;
+}
+
+div.regDialog
+{
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px;
+    background-color: #4db18c;
+
+    width: 337px;
+    height: 385px;
+    //min-width: 70%;
+    display: flex;
+    flex-direction: column;
+
+    margin: 30px;
+    padding: 10px;
+}
+
+.regLabelaDiv
+{
+    //border-radius: 20px;
+    //box-shadow: 5px 5px 10px;
+    color: white;
+    //border: 2px solid black;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 2.3em;
+    height: 2em;
+}
+
+.usernameDiv, .passwordDiv, .emailDiv, .mobBrDiv, .prezimeDiv, .imeDiv
+{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 10px;
+}
+
+.usernameUnos, .passwordUnos, .emailUnos, .mobBrUnos, .imeUnos, .prezimeUnos
+{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    
+}
+
+.labeleUnosa
+{
+    font-size: 22px;
+    color: white;
+}
+
+.dugmiciDiv
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: wheat;
+}
+
+.dugmici
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    border: 1px solid black;
+    margin: 10px;
+    min-width: 40%;
+    height: 50px;
+    font-size: 16px;
+
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px;
+    background-color: white;
+    border: 2px solid black;
+    color: #4db18c;
+
+    &:hover
+    {
+        cursor: pointer;
+    }
+}
+.nameInput, .emailInput, .passwordInput{
+    width: 100%;
+}
+.btnSignUp{
+
+    margin-left: 90%;
+}

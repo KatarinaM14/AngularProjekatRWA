@@ -1,0 +1,66 @@
+<div class="regContainer" >
+
+    <div class = "regDialog">
+
+        <div class="regLabelaDiv">
+            <h1>Registruj se</h1>
+        </div>
+
+        <!-- <div class = "usernameDiv">
+            <a class = "labeleUnosa">Username: </a>
+            <input class="usernameUnos">
+        </div>
+        
+        <div class = "passwordDiv">
+            <a class = "labeleUnosa">Password: </a>
+            <input class="passwordUnos">
+        </div>
+
+        <div class = "emailDiv">
+            <a class = "labeleUnosa">Email: </a>
+            <input class="emailUnos">
+        </div> -->
+
+        <form [formGroup]="form" class="forma">
+    
+            <div class="divData">
+                <mat-form-field appearance="outline" class="nameInput" >
+                    <mat-label>Name</mat-label>
+                    <input formControlName="name" type="name" matInput placeholder="Name" required>
+                  </mat-form-field>
+            
+                <mat-form-field appearance="outline" class="emailInput" >
+                  <mat-label>Email</mat-label>
+                  <input formControlName="email" type="email" matInput placeholder="email" required>
+                </mat-form-field>
+              
+              <mat-form-field appearance="fill" class="passwordInput">
+                <mat-label>Enter your password</mat-label>
+                <input formControlName="password"  matInput [type]="hide ? 'password' : 'text'" required>
+                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                  <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+              </mat-form-field>
+        </div>
+          
+          <div class="btn">
+            <button mat-raised-button  (click)="registracija()" routerLink="/login"  class="btnSignUp">
+                <!-- <a mat-list-item  routerLinkActive="list-item-active"> -->
+                    Registruj se
+                <!-- </a> -->
+            </button>
+          </div>
+        </form>
+         
+
+        
+
+
+        <!-- <div class = "dugmiciDiv" *ngIf = "korisnici$ | async as korisnici"> -->
+            <!-- <div class = "dugmici" routerLink = "/login" (click) = "registracija()">Registruj se</div> -->
+            <!-- <div href="#" routerLink = "/login" class = "dugmici">Uloguj se</div> -->
+        <!-- </div> -->
+
+    </div>
+    
+</div>

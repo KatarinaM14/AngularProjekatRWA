@@ -75,5 +75,55 @@
       "description": "Potrebna mi je pomoc oko kucnog ljubimca.",
       "volunteer": false
     }
+  ],
+  "user": [
+    {
+      "id": 1,
+      "name": "Katarina Maskimovic",
+      "email": "katarina@gmail.com",
+      "password": "katarina"
+    },
+    {
+      "name": "Tijana",
+      "email": "tijana@gmail.com",
+      "password": "tijana",
+      "type": "Registrovanje novog korisnika",
+      "id": 2
+    },
+    {
+      "name": "Srdjan M",
+      "email": "srdjan@gmail.com",
+      "password": "srdjan",
+      "type": "Registrovanje novog korisnika",
+      "id": 3
+    },
+    {
+      "name": "Milica M",
+      "email": "mica@gmail.com",
+      "password": "mica",
+      "type": "Registrovanje novog korisnika",
+      "id": 4
+    },
+    {
+      "name": "Dragana D",
+      "email": "dragana@gmail.com",
+      "password": "dragana",
+      "type": "Registrovanje novog korisnika",
+      "id": 5
+    },
+    {
+      "name": "Danica",
+      "email": "danica@gmail.com",
+      "password": "danica",
+      "type": "Registrovanje novog korisnika",
+      "id": 6
+    },
+    {
+      "name": "Nikola D ",
+      "email": "nikola@gmail.com",
+      "password": "nikola",
+      "type": "Registrovanje novog korisnika",
+      "id": 7
+    }
   ]
 }

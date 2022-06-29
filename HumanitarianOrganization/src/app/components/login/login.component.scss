@@ -1,0 +1,44 @@
+
+app-login{
+    min-height: 800px;
+}
+
+.login{
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    align-items: center;
+    margin-top: 15%;
+    margin-left: 40%;
+    max-width: 350px;
+    background-color: #4db18c ;
+    //max-height: 900px;
+    box-shadow: 5px 5px 10px;
+}
+
+.btn{
+   margin-bottom: 2px;
+  margin-left: 25%;
+  color:#4db18c;
+}
+.divData{
+    display: flex ;
+    flex-direction: column;
+}
+.forma{
+    max-height: 560px;
+}
+mat-form-field-flex ng-tns-c84-1{
+    background-color: white;
+}
+.loginLabelaDiv{
+    color: white;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 2.4em;
+    height: 2em;
+}

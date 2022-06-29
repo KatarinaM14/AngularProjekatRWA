@@ -16,6 +16,7 @@ export class ClothesListComponent implements OnInit {
 
   allClothes: Observable<readonly Clothes[]> = of([]);
 
+  
   constructor(private store: Store<AppState>) { }
 
   ngOnInit(): void {

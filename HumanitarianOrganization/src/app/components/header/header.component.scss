@@ -35,3 +35,39 @@ button{
         width: 160px;
     }
 }
+.dugmici{
+    display: flex;
+    flex-direction:row;
+    margin-right: 60px;
+}
+.dugmiciDiv{
+    display: flex;
+    flex-direction:row;
+    
+}
+
+.dugmici1, .dugmici2,.dugmici3{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    //border: 1px solid black;
+    margin: 10px;
+    min-width: 50%;
+    height: 50px;
+    font-size: 16px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px;
+    background-color:#4db18c;
+    color: white;
+    //border: 1px solid black;
+
+    &:hover
+    {
+        cursor: pointer;
+    }
+}
+.dugmici3{
+    min-width: 100%;
+}
