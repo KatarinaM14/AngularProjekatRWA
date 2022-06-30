@@ -11,7 +11,6 @@ export class UserEffect {
     registerNewUser$ = createEffect(() => 
         this.actions$.pipe(
             ofType(UserActions.registerNewUser),
-            //map((user) => console.log(user.newUser)),
             switchMap((user) => this.userService.addUser(user).pipe(
                 map((user) => (UserActions.loadUsers({user}))),
                 catchError(() => of({type: "load error"}))
@@ -23,7 +22,6 @@ export class UserEffect {
     registerNewUserNestJS$ = createEffect(() => 
         this.actions$.pipe(
             ofType(UserActions.registerNewUserNestJS),
-            //map((user) => console.log(user.newUser)),
             switchMap((user) => this.userService.addUserNestJS(user).pipe(
                 map((user) => (UserActions.loadUsers({user}))),
                 catchError(() => of({type: "load error"}))

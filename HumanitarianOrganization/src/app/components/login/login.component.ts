@@ -19,7 +19,7 @@ export class LoginComponent implements OnInit {
 
   userForm !: FormGroup;
 
-  @Input() user: User | null = null;
+  //@Input() user: User | null = null;
   
   constructor( 
     private store: Store<AppState>,
@@ -31,14 +31,14 @@ export class LoginComponent implements OnInit {
   hide = true;
   
   ngOnInit(): void {
-    this.store.select(selectLoggedInUser).subscribe((user) =>{
-      if(user){
-        console.log(user);
-        this.user = user;
-      }
-    });
+    // this.store.select(selectLoggedInUser).subscribe((user) =>{
+    //   if(user){
+    //     console.log(user);
+    //     this.user = user;
+    //   }
+    // });
 
-    console.log(this.user);
+    // console.log(this.user);
    
     this.userForm = this.formBuilder.group({
        email:'',
@@ -48,59 +48,59 @@ export class LoginComponent implements OnInit {
 
   ///////////////////////////////////////////////////
   /////ZA JSON////////////////////////////////////////
-  // async submit(){
-  //   console.log("submit");
-  //   console.log("Email: " + this.userForm.getRawValue().email);
-  //   console.log("pasword: " + this.userForm.getRawValue().password);
-
-  //   console.log("Login:" + this.userForm.getRawValue());
-
-  //   console.log(this.user);
-
-  // this.http.get<any>(`${environment.apiURL}/user/`)
-  //   .subscribe(res=>{
-  //     const user = res.find((a:any) => {
-  //       return a.email === this.userForm.value.email &&
-  //                 a.password === this.userForm.value.password
-  //     });
-  //     if(user){
-  //       alert("Login success!");
-  //       this.userForm.reset();
-  //       Emitters.authEmitter.emit(true);
-  //       this.router.navigate(["home"]); 
-  //     }else{
-  //       alert("User not found");
-  //       Emitters.authEmitter.emit(false);
-  //     }
-  //   }, err=>{
-  //     alert("Something went wrong!");
-  //     Emitters.authEmitter.emit(false);
-  //   }
-  //   )
-  // }
-
-
-  ///ZA NESTJS
-    //////////////////////////////////////////////
-   submit(){
+  async submit(){
     console.log("submit");
     console.log("Email: " + this.userForm.getRawValue().email);
     console.log("pasword: " + this.userForm.getRawValue().password);
 
     console.log("Login:" + this.userForm.getRawValue());
 
-    console.log(this.user);
+    
+
+  this.http.get<any>(`${environment.apiURL}/user/`)
+    .subscribe(res=>{
+      const user = res.find((a:any) => {
+        return a.email === this.userForm.value.email &&
+                  a.password === this.userForm.value.password
+      });
+      if(user){
+        alert("Login success!");
+        this.userForm.reset();
+        Emitters.authEmitter.emit(true);
+        this.router.navigate(["home"]); 
+      }else{
+        alert("User not found");
+        Emitters.authEmitter.emit(false);
+      }
+    }, err=>{
+      alert("Something went wrong!");
+      Emitters.authEmitter.emit(false);
+    }
+    )
+  }
+
+
+  ///ZA NESTJS
+    //////////////////////////////////////////////
+  //  submit(){
+  //   console.log("submit");
+  //   console.log("Email: " + this.userForm.getRawValue().email);
+  //   console.log("pasword: " + this.userForm.getRawValue().password);
+
+  //   console.log("Login:" + this.userForm.getRawValue());
+
+  //  // console.log(this.user);
 
     
-    this.http.post(`${environment.apiURL}/auth/login`, this.userForm.getRawValue(), 
-    {withCredentials: true}
-    ).subscribe( );
+  //   this.http.post(`${environment.apiURL}/auth/login`, this.userForm.getRawValue(), 
+  //   {withCredentials: true}
+  //   ).subscribe( );
      
          
-            alert("Login success!");
-            this.userForm.reset();
-            Emitters.authEmitter.emit(true);
-            this.router.navigate(["home"]); 
+  //           alert("Login success!");
+  //           this.userForm.reset();
+  //           Emitters.authEmitter.emit(true);
+  //           this.router.navigate(["home"]); 
         
-  }
+  // }
 }

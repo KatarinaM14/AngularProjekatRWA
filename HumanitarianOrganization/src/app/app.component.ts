@@ -15,8 +15,8 @@ import { Emitters } from './components/emitters/emitters';
 export class AppComponent {
   title = 'HumanitarianOrganization';
 
-  sideBarOpen = true;
-  auth = false;
+  sideBarOpen = false;
+  //auth = Emitters.authenticated;
 
 
   constructor(private store: Store<AppState>) {}
@@ -26,15 +26,19 @@ export class AppComponent {
     this.store.dispatch(loadFood());
     this.store.dispatch(loadVolunteering());
     this.store.dispatch(loadUser());
-    Emitters.authEmitter.subscribe(
-      (auth: boolean)=>{
-        this.auth = auth;
-      }
-    );
+    
+    //   Emitters.authEmitter.subscribe(()=> {
+    //     this.auth =Emitters.authenticated;
+    //   } );
+      
+    
+    // console.log(this.auth);
   }
+
+
 
   sideBarToggler(){
     this.sideBarOpen = !this.sideBarOpen;
-    
+    //console.log(this.auth);
   }
 }

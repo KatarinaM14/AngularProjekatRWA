@@ -1,8 +1,8 @@
 <mat-drawer-container>
     <mat-drawer mode="side" [opened]="sideBarOpen">
-        <div  *ngIf="auth" >
+        <!-- <div  *ngIf="auth" > -->
             <app-sidenav></app-sidenav>
-        </div>
+        <!-- </div> -->
     </mat-drawer>
     <mat-drawer-content>
         <app-header (toggleSidebarForMe)="sideBarToggler()"></app-header>

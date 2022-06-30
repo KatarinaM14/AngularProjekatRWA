@@ -34,61 +34,61 @@ export class RegisterComponent implements OnInit {
   /////////////////////////////////////////////////////////////////////////
   ///////////////////ZAC JSON////////////////////////////////////////////////////////
   ///////ZA JSON /////////////////////////////////// ZA JSON//////////////////////////////
-  // registracija()
-  // {
+  registracija()
+  {
 
-  //   console.log(this.form.value);
-     
-  //   console.log(this.form.value.name);
-  //   console.log(this.form.value.email);
-  //   console.log(this.form.value.password);
-    
-
-  //   // UserModel.name = this.form.value.name;
-  //   // console.log( UserModel.name);
-  //   // console.log(UserModel.name);
-  //   // UserModel.email = this.form.value.email;
-  //   // console.log(UserModel.email);
-  //   // UserModel.password = this.form.value.password;
-    
-
-  //   // console.log("Name " + UserModel.name);
-  //   // console.log("email " + UserModel.email);
-  //   // console.log("password " + UserModel.password);
-
-  //   this.store.dispatch(
-  //     Actions.registerNewUser({
-  //       name : this.form.value.name,
-  //       email: this.form.value.email,
-  //       password: this.form.value.password
-  //     })
-  //   );
-    
-  // }
-
-
-  /////////////////////////////////////////////////////////////////////////
-  ///////////////////ZA NESTJS////////////////////////////////////////////////////////
-  ///////ZA NESTJS /////////////////////////////////// ZA NESTJS//////////////////////////////
-  registracija(){
-
-      console.log(this.form.value);
+    console.log(this.form.value);
      
     console.log(this.form.value.name);
     console.log(this.form.value.email);
     console.log(this.form.value.password);
     
 
+    // UserModel.name = this.form.value.name;
+    // console.log( UserModel.name);
+    // console.log(UserModel.name);
+    // UserModel.email = this.form.value.email;
+    // console.log(UserModel.email);
+    // UserModel.password = this.form.value.password;
+    
+
+    // console.log("Name " + UserModel.name);
+    // console.log("email " + UserModel.email);
+    // console.log("password " + UserModel.password);
+
     this.store.dispatch(
-      Actions.registerNewUserNestJS({
+      Actions.registerNewUser({
         name : this.form.value.name,
         email: this.form.value.email,
         password: this.form.value.password
       })
     );
+    
+  }
+
+
+  /////////////////////////////////////////////////////////////////////////
+  ///////////////////ZA NESTJS////////////////////////////////////////////////////////
+  ///////ZA NESTJS /////////////////////////////////// ZA NESTJS//////////////////////////////
+  // registracija(){
+
+  //     console.log(this.form.value);
+     
+  //   console.log(this.form.value.name);
+  //   console.log(this.form.value.email);
+  //   console.log(this.form.value.password);
+    
+
+  //   this.store.dispatch(
+  //     Actions.registerNewUserNestJS({
+  //       name : this.form.value.name,
+  //       email: this.form.value.email,
+  //       password: this.form.value.password
+  //     })
+  //   );
 
    
-  }
+  // }
      
   
 }

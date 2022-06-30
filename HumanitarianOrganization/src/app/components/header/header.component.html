@@ -1,7 +1,8 @@
 <mat-toolbar>
     <mat-toolbar-row class="justify-content-between">
+        <div  *ngIf="authenticated">
         <button mat-icon-button (click)="toggleSidebar()"><mat-icon>menu</mat-icon></button>
-        
+    </div>
         <!-- <div class="row mr-2 ml-auto">
             <ul>
                 <li>
@@ -19,7 +20,7 @@
                 </li>
             </ul>
         </div> -->
-        <div  *ngIf="!authenticated" class="dugmici">
+        <div  *ngIf="!authenticated" class="dugmiciLiR">
         <div class = "dugmiciDiv">
             <div class = "dugmici1"  routerLink = "/login">Uloguj se</div>
             <div class = "dugmici2" routerLink = "/register" >Registruj se</div>

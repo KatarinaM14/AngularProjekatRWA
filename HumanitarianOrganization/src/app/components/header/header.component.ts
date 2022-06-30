@@ -26,15 +26,13 @@ export class HeaderComponent implements OnInit {
         this.authenticated = auth;
       }
     );
+    console.log(this.authenticated);
   }
 
   toggleSidebar(){
     this.toggleSidebarForMe.emit();
   }
   
-  //logIn(korisnici: User[]){
-
- // }
 
  logout(){
     this.http.post(`${environment.apiURL}/auth/logout`, {} , {withCredentials: true})

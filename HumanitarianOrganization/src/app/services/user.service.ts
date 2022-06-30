@@ -21,13 +21,6 @@ export class UserService {
 
   addUser(newUser: any) {
 
-    console.log("addUSer" + newUser);
-    console.log("name" + newUser.name);
-    console.log("email" + newUser.email);
-    console.log("password" + newUser.password);
-   // const {id,role, lastName, firstName, phoneNumber, status, token, ...user} = newUser;
-
-    console.log("SERVICE " + newUser);
 
     // return this.httpClient
     //   .post<User>(environment.apiURL + 'register', newUser)
@@ -40,13 +33,6 @@ export class UserService {
 
   addUserNestJS(newUser: any) {
 
-    console.log("addUSer" + newUser);
-    console.log("name" + newUser.name);
-    console.log("email" + newUser.email);
-    console.log("password" + newUser.password);
-   // const {id,role, lastName, firstName, phoneNumber, status, token, ...user} = newUser;
-
-    console.log("SERVICE " + newUser);
 
     return this.httpClient
       .post<User>(environment.apiURL + '/auth/register', newUser)
@@ -69,25 +55,25 @@ export class UserService {
 
   
 
-  setLoggedInUser(saveUser: User) {
-    sessionStorage.setItem(
-      'korisnik',
-      JSON.stringify({ korisnik: saveUser })
-    );
+  // setLoggedInUser(saveUser: User) {
+  //   sessionStorage.setItem(
+  //     'korisnik',
+  //     JSON.stringify({ korisnik: saveUser })
+  //   );
 
-  }
+  // }
 
 
-  userLogOut() {
-    let tempUser = this. getLoggedInUser();
-    sessionStorage.clear();
-    return this.httpClient
-      .put<User>(
-        environment.apiURL + 'logout/' +  tempUser.id,
-        tempUser
-      )
-      .pipe(catchError(errorHandler));
-  }
+  // userLogOut() {
+  //   let tempUser = this. getLoggedInUser();
+  //   sessionStorage.clear();
+  //   return this.httpClient
+  //     .put<User>(
+  //       environment.apiURL + 'logout/' +  tempUser.id,
+  //       tempUser
+  //     )
+  //     .pipe(catchError(errorHandler));
+  // }
 }
 
 const errorHandler = (error: HttpErrorResponse) => {

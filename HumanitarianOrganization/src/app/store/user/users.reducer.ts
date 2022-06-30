@@ -12,7 +12,6 @@ export interface UserState extends EntityState<User>{
 
 const initialState : UserState = adapter.getInitialState({
     loggedInUserId: 0,
-    // logedInUser: new User("", "", "", )
     logedInUser: new User("", "", "" )
 });
 

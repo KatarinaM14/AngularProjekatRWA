@@ -50,14 +50,5 @@ export class DialogComponent implements OnInit {
    
   }
 
-   //   onSubmit(f: NgForm){
-  //     this.store.dispatch(
-  //       Actions.addFood({
-  //         category: f.value.category,
-  //         name: f.value.name,
-  //         donor: f.value.name,
-  //         image: f.value.image,
-  //       })
-  //     );
-  // }
+  
 }

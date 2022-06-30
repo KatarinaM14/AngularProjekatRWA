@@ -124,6 +124,27 @@
       "password": "nikola",
       "type": "Registrovanje novog korisnika",
       "id": 7
+    },
+    {
+      "name": "Kristina Karadzic",
+      "email": "kristina@gmail.com",
+      "password": "kristina",
+      "type": "Registrovanje novog korisnika",
+      "id": 8
+    },
+    {
+      "name": "Milena Trajkovic",
+      "email": "milena@gmail.com",
+      "password": "milena",
+      "type": "Registrovanje novog korisnika",
+      "id": 9
+    },
+    {
+      "name": "Nemanja Matic",
+      "email": "nemanja@gmail.com",
+      "password": "nemanja",
+      "type": "Registrovanje novog korisnika",
+      "id": 10
     }
   ]
 }
